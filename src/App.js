@@ -8,11 +8,18 @@ import Card from "./components/shared/Card";
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
 
+  const deleteFeedback = (id) => {
+    console.log("id", id);
+    if (window.confirm("Are you sure you want to delete?")) {
+      setFeedback(feedback.filter((item) => item.id !== id));
+    }
+  };
+
   return (
     <>
       <Header text="Hello world" />
       <div className="container">
-        <FeedbackList feedback={feedback} />
+        <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
       </div>
     </>
   );
