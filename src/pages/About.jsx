@@ -1,4 +1,6 @@
 import Card from '../components/shared/Card'
+import {Link} from 'react-router-dom'
+
 function About() {
   return <Card>
     <div className='about'>
@@ -6,7 +8,9 @@ function About() {
         <p>This is a React app to leave feedback for something</p>
         <p>Version: 6.6.3</p>
         <p>
-            <a href='/'>Back to Home</a>
+        <Link to='/'>
+            Back to Home
+        </Link>
         </p>
     </div>
   </Card>;
