@@ -10,7 +10,7 @@ function About() {
         <p>
         <Link to='/'>
             Back to Home
-        </Link>
+         </Link>
         </p>
     </div>
   </Card>;
